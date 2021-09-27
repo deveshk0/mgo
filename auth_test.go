@@ -39,7 +39,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/vinllen/mgo"
+	"github.com/deveshk0/mgo"
 	. "gopkg.in/check.v1"
 )
 

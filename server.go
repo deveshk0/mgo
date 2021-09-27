@@ -33,7 +33,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/vinllen/mgo/bson"
+	"github.com/deveshk0/mgo/bson"
 )
 
 // coarseTime is used to amortise the cost of querying the timecounter (possibly
@@ -174,7 +174,7 @@ func (server *mongoServer) acquireSocketInternal(
 				timeSpentWaiting := time.Duration(0)
 
 				/*
-				 * @vinllen modification.
+				 * @deveshk0 modification.
 				 * Before:
 				 *     len(server.liveSockets)-len(server.unusedSockets) >= poolLimit
 				 * Explanation:

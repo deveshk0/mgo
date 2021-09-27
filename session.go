@@ -44,7 +44,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/vinllen/mgo/bson"
+	"github.com/deveshk0/mgo/bson"
 )
 
 // Mode read preference mode. See Eventual, Monotonic and Strong for details
@@ -1861,13 +1861,13 @@ func simpleIndexKey(realKey bson.D) (key []string) {
 			}
 		case int:
 			vi = realKey[i].Value.(int)
-        case bool:
+		case bool:
 			vb, _ := realKey[i].Value.(bool)
-            if vb {
-                vi = 1 // set to 1 if true
-            } else {
-                vi = 0
-            }
+			if vb {
+				vi = 1 // set to 1 if true
+			} else {
+				vi = 0
+			}
 		}
 
 		if vi == 1 {
@@ -1878,7 +1878,7 @@ func simpleIndexKey(realKey bson.D) (key []string) {
 			key = append(key, "-"+field)
 			continue
 		}
-        // do not panic whatever
+		// do not panic whatever
 		// panic("Got unknown index key type for field " + field)
 	}
 	return
@@ -2784,7 +2784,6 @@ func (p *Pipe) SetMaxTime(d time.Duration) *Pipe {
 	return p
 }
 
-
 // Collation allows to specify language-specific rules for string comparison,
 // such as rules for lettercase and accent marks.
 // When specifying collation, the locale field is mandatory; all other collation
@@ -2827,7 +2826,7 @@ func (err *LastError) Error() string {
 type CmdError struct {
 	Ok          int64                    `bson:"ok"`
 	N           int64                    `bson:"n"`
-	Code           int                    `bson:"code"`
+	Code        int                      `bson:"code"`
 	ErrMsg      string                   `bson:"errmsg"`
 	WriteErrors []map[string]interface{} `bson:"writeErrors"`
 }

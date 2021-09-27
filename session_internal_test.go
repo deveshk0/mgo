@@ -3,9 +3,10 @@ package mgo
 import (
 	"crypto/x509/pkix"
 	"encoding/asn1"
-	"github.com/vinllen/mgo/bson"
-	. "gopkg.in/check.v1"
 	"testing"
+
+	"github.com/deveshk0/mgo/bson"
+	. "gopkg.in/check.v1"
 )
 
 type S struct{}
@@ -17,7 +18,7 @@ var _ = Suite(&S{})
 
 // Ensures indexed int64 fields do not cause mgo to panic.
 //
-// See https://github.com/vinllen/mgo/pull/23
+// See https://github.com/deveshk0/mgo/pull/23
 func TestIndexedInt64FieldsBug(t *testing.T) {
 	input := bson.D{
 		{Name: "testkey", Value: int(1)},

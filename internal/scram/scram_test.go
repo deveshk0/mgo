@@ -3,7 +3,7 @@ package scram_test
 import (
 	"testing"
 
-	"github.com/vinllen/mgo/internal/scram"
+	"github.com/deveshk0/mgo/internal/scram"
 	. "gopkg.in/check.v1"
 )
 

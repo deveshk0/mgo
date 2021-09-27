@@ -36,8 +36,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	mgo "github.com/vinllen/mgo"
-	"github.com/vinllen/mgo/bson"
+	mgo "github.com/deveshk0/mgo"
+	"github.com/deveshk0/mgo/bson"
 	. "gopkg.in/check.v1"
 )
 

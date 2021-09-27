@@ -1,6 +1,6 @@
 language: go
 
-go_import_path: github.com/vinllen/mgo
+go_import_path: github.com/deveshk0/mgo
 
 go:
     - 1.9.x
@@ -8,7 +8,7 @@ go:
 
 env:
     global:
-        - BUCKET=https://s3.eu-west-2.amazonaws.com/vinllen-mgo
+        - BUCKET=https://s3.eu-west-2.amazonaws.com/deveshk0-mgo
         - FASTDL=https://fastdl.mongodb.org/linux
     matrix:
         - MONGODB=x86_64-ubuntu1404-3.0.15
@@ -33,7 +33,7 @@ install:
 
 before_script:
     - golint  ./... | grep -v 'ID' | cat
-    - go vet github.com/vinllen/mgo/bson github.com/vinllen/mgo/txn github.com/vinllen/mgo 
+    - go vet github.com/deveshk0/mgo/bson github.com/deveshk0/mgo/txn github.com/deveshk0/mgo 
     - export NOIPV6=1
     - make startdb
 

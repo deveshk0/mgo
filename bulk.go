@@ -5,8 +5,9 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/vinllen/mgo/bson"
 	"fmt"
+
+	"github.com/deveshk0/mgo/bson"
 )
 
 // Bulk represents an operation that can be prepared with several
@@ -66,7 +67,7 @@ type BulkError struct {
 }
 
 /*
- * @vinllen. Add index in error message so that outer code can catch
+ * @deveshk0. Add index in error message so that outer code can catch
  * the which element in bulk meeting error.
  */
 func (e *BulkError) Error() string {

@@ -1,7 +1,7 @@
 package bson_test
 
 import (
-	"github.com/vinllen/mgo/bson"
+	"github.com/deveshk0/mgo/bson"
 
 	"reflect"
 	"strings"
